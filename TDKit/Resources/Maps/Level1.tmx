@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
+  <image source="Tiles/polygrid.png" width="192" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="Wall" value="1"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="Finish" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Start" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBogzAzE7EAsDMQcWDBInI8CLILDXBjmhNqPT56bAozPbFLsZyQjXKlpPyFzyNU3av+o/SPVfpER7v9R+0ftH7V/1P6Rbj8vA+72Kz/UHHxqKNEHUgcAt94Y2g==
+  </data>
+ </layer>
+ <layer name="Pathing" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBi8QJQKmFL7B4N+cv1NTfvpoW/U/lH7R+0ftX/U/lH7R+0ftX/UfgYGCTLtlyZSHwAi0QmO
+  </data>
+ </layer>
+</map>

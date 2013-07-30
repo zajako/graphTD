@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
+  <image source="Tiles/polygrid.png" width="192" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="Wall" value="1"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="Finish" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Start" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2WTQuAIAxAVxFl9EVJUdT//5stSujW5qx16PDAizxwTzECgFiJBMmQHqkVaE6/QQYkfZnu4i+RSOn8nX9f5y9iPuyXNmmFfkmTI/Es7/wF8JtMGLOk+LlNcFrS9NsH/dR9d/5W0T/B0dOs5Pfl9/9+X38FYf40Pv4Fwv1rVqbf3fWQUN4N55fOXNJKiJlLWtkAobYk7wAMAAA=
+  </data>
+ </layer>
+ <layer name="Pathing" width="32" height="24">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGHggOoCYAYmmJ5DGYv9A+38gwmGw2k+tsKXEfkoAteynR54iZD8pYNR+6tkvMcD2k5qPqGk/uWDU/lH7KbGf2nU6KfZTE5BqPy3wKCAMAKXTca0ADAAA
+  </data>
+ </layer>
+</map>

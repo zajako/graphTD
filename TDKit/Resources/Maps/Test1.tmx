@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tile4" tilewidth="32" tileheight="32">
+  <image source="Tiles/mana1.png" width="800" height="600"/>
+  <tile id="350">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="375">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="376">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="377">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="378">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="379">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="380">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="381">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="382">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="383">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="386">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="387">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="400">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="401">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="402">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="403">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="404">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="405">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="406">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="407">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="408">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="411">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="412">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="425">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="426">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="427">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="428">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="429">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="430">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="431">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="432">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="433">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="434">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="435">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="436">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Water" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJybzcjAMJtOeBYWTC+7R+0ftX/U/lH7R+0ftX842E+O/uHkf2rbj02O2u7DZT4xbFrZP4pHNgYABDPTHg==
+  </data>
+ </layer>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztlW0KwjAMQNuTdgfZhxWvMGWiV1Cn836mkECppeuSiqALPLYfoa9Zk06pNVyctVIPYGKw03L/E9YwyCETyh8i/uPCPZG/BqpMuoSfU3+P6zbAbYYWc8cP+EesK1YzffP+h/yuVyT++xfqvwS5nLmddNpvvH2YCC3OgJvFPROJn/IlSPzurmjw/cqE6w/PnwvX7+dugC1iM59EzN8FPVLp976pPX+p+4d6Ord36OxL+h1zdz+R+v8tjZOgh0r4baQ3crEF/Gv8Z7wAqBW+aA==
+  </data>
+ </layer>
+ <layer name="decorations" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2Bwgo1A/BcJb6az/aeAWIwRgc/Q2f7HQCyNhJ+OMPv/MEDinQFK/6Oz/aLQeAcBEC0OZXMCMRcQc9PZPTCgBMTKQKwyQPZbA7ENENsOkP2jYBSMglEwCigHAErXD/Q=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="32" height="24">
+  <object name="Waypoint0" x="1003" y="366"/>
+  <object name="Waypoint1" x="527" y="366"/>
+  <object name="Waypoint2" x="492" y="295"/>
+  <object name="Waypoint3" x="491" y="178"/>
+  <object name="Waypoint4" x="448" y="144"/>
+  <object name="Waypoint5" x="175" y="146"/>
+  <object name="Waypoint6" x="141" y="189"/>
+  <object name="Waypoint7" x="139" y="492"/>
+  <object name="Waypoint8" x="183" y="531"/>
+  <object name="Waypoint9" x="301" y="529"/>
+  <object name="Waypoint10" x="299" y="275"/>
+  <object name="Waypoint11" x="303" y="530"/>
+  <object name="Waypoint12" x="459" y="529"/>
+  <object name="Waypoint13" x="491" y="495"/>
+  <object name="Waypoint14" x="492" y="428"/>
+  <object name="Waypoint15" x="528" y="368"/>
+  <object name="Waypoint16" x="1003" y="370"/>
+ </objectgroup>
+</map>
