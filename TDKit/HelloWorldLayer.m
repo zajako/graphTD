@@ -95,7 +95,7 @@
 	
 	if (![_map isWallAt:pos])
 	{
-		[_map addTower:[NNTower entityWithConfig:@"WarTanks_GameArt/tank3_turret_blue.png"] atTile:pos];
+		[_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
 	}
 }
 

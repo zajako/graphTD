@@ -18,12 +18,13 @@
 
 -(id)initWithConfig:(NSString *)file
 {
-    //Load Confgif file for tower
-    
-    //get image file from config
+    //Load Confg file for tower
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSString *finalPath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"gamedata/towers/%@.plist", file]];
+    NSDictionary *plistData = [[NSDictionary dictionaryWithContentsOfFile:finalPath] retain];
     
     //load tower with image
-	self = [super initWithImageFile: file];
+	self = [super initWithImageFile: [NSString stringWithFormat:@"%@", [plistData objectForKey:@"sprite"]]];
     
     //Set Towers stats acording to config
     
