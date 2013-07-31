@@ -67,7 +67,7 @@
 
 -(void)spawnCreep
 {
-	TDEntity *ent = [TDEntity entityWithImageFile:@"WarTanks_GameArt/tank3_turret_red.png"];
+	NNEntity *ent = [NNEntity entityWithImageFile:@"WarTanks_GameArt/tank3_turret_red.png"];
 	[ent setExplosionFile:@"CreepExplosion.plist"];
 	
 	float speed = [self randFloatBetween:20 and:100];

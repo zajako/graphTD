@@ -25,7 +25,7 @@
 	return [[[self alloc] init] autorelease];
 }
 
-+(TDEntity *)entityWithImageFile:(NSString *)file
++(id)entityWithImageFile:(NSString *)file
 {
 	return [[[self alloc] initWithImageFile:file] autorelease];
 }

@@ -35,7 +35,7 @@
 
 #pragma mark - Static
 +(TDEntity *)entity;
-+(TDEntity *)entityWithImageFile:(NSString *)file;
++(id)entityWithImageFile:(NSString *)file;
 
 #pragma mark - Instance
 -(id)initWithImageFile:(NSString *)file;
