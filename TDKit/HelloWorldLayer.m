@@ -95,8 +95,14 @@
 	
 	if (![_map isWallAt:pos])
 	{
-		//[_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
-        [_map addTower:[NNTower entityWithConfig:@"tower_beam"] atTile:pos];
+        if([self randFloatBetween:1 and:100] < 50)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
+        }
+        else
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_beam"] atTile:pos];
+        }
 	}
 }
 
