@@ -6,5 +6,25 @@
 	<string>Blaster</string>
 	<key>sprite</key>
 	<string>gameimg/towers/x.png</string>
+	<key>projectile-sprite</key>
+	<string>gameimg/projectiles/bullet_twin_blaster.png</string>
+	<key>projectile-explosion</key>
+	<string>ProjectileExplosion.plist</string>
+	<key>projectile-damage</key>
+	<integer>5</integer>
+	<key>projectile-speed</key>
+	<integer>300</integer>
+	<key>projectile-range</key>
+	<integer>100</integer>
+	<key>tower-fireRate</key>
+	<integer>1</integer>
+	<key>tower-range</key>
+	<integer>100</integer>
+	<key>tower-rotateSpeed</key>
+	<real>0.1</real>
+	<key>tower-hp</key>
+	<integer>100</integer>
+	<key>tower-mp</key>
+	<integer>50</integer>
 </dict>
 </plist>

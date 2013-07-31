@@ -11,6 +11,7 @@
 		816258FF17A8A3FD00980C90 /* NNTower.m in Sources */ = {isa = PBXBuildFile; fileRef = 816258FE17A8A3FD00980C90 /* NNTower.m */; };
 		8162590617A8AACA00980C90 /* gamedata in Resources */ = {isa = PBXBuildFile; fileRef = 8162590517A8AACA00980C90 /* gamedata */; };
 		8162590817A8AFFF00980C90 /* gameimg in Resources */ = {isa = PBXBuildFile; fileRef = 8162590717A8AFFF00980C90 /* gameimg */; };
+		8162590B17A8C5BC00980C90 /* NNProjectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162590A17A8C5BC00980C90 /* NNProjectile.m */; };
 		E0099AEE178FA8B5008F62A3 /* Maps in Resources */ = {isa = PBXBuildFile; fileRef = E0099AED178FA8B5008F62A3 /* Maps */; };
 		E00B2199178F8CB500715779 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00B2198178F8CB500715779 /* QuartzCore.framework */; };
 		E00B219B178F8CB500715779 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00B219A178F8CB500715779 /* OpenGLES.framework */; };
@@ -176,6 +177,8 @@
 		816258FE17A8A3FD00980C90 /* NNTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NNTower.m; path = GraphTD/NNTower.m; sourceTree = "<group>"; };
 		8162590517A8AACA00980C90 /* gamedata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = gamedata; path = Resources/gamedata; sourceTree = "<group>"; };
 		8162590717A8AFFF00980C90 /* gameimg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = gameimg; path = Resources/gameimg; sourceTree = "<group>"; };
+		8162590917A8C5BC00980C90 /* NNProjectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NNProjectile.h; path = GraphTD/NNProjectile.h; sourceTree = "<group>"; };
+		8162590A17A8C5BC00980C90 /* NNProjectile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NNProjectile.m; path = GraphTD/NNProjectile.m; sourceTree = "<group>"; };
 		E0099AED178FA8B5008F62A3 /* Maps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Maps; path = Resources/Maps; sourceTree = "<group>"; };
 		E00B2195178F8CB500715779 /* TDKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00B2198178F8CB500715779 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -531,6 +534,8 @@
 				816258F817A8A09400980C90 /* NNEntity.m */,
 				816258FD17A8A3FD00980C90 /* NNTower.h */,
 				816258FE17A8A3FD00980C90 /* NNTower.m */,
+				8162590917A8C5BC00980C90 /* NNProjectile.h */,
+				8162590A17A8C5BC00980C90 /* NNProjectile.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -1256,6 +1261,7 @@
 				E0A75003179A281100EEFB0F /* PFJumpPointSearch.m in Sources */,
 				816258F917A8A09400980C90 /* NNEntity.m in Sources */,
 				816258FF17A8A3FD00980C90 /* NNTower.m in Sources */,
+				8162590B17A8C5BC00980C90 /* NNProjectile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
