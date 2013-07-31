@@ -13,7 +13,7 @@
 #import "cocos2d.h"
 #import "TDMap.h"
 #import "NNEntity.h"
-#import "TDTower.h"
+#import "NNTower.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
