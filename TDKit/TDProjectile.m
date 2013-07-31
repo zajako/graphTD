@@ -51,6 +51,7 @@
 	[super onEnter];
 	
 	[_healthGauge setVisible:NO];
+	[_healthGauge setAutoShow:NO];
 	
 	float angle = ccpToAngle(ccpSub([target position], [source position]));
 	CGPoint dest = [source position];

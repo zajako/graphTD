@@ -157,6 +157,12 @@
 		E0A74FE91793AE5100EEFB0F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A74FE71793AE5100EEFB0F /* star.png */; };
 		E0A74FEB1793C35700EEFB0F /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A74FEA1793C35700EEFB0F /* health.png */; };
 		E0A74FED179452E300EEFB0F /* health-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A74FEC179452E300EEFB0F /* health-bg.png */; };
+		E0A74FF117946EA800EEFB0F /* TDBarGuage.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A74FF017946EA800EEFB0F /* TDBarGuage.m */; };
+		E0A74FF317946F5B00EEFB0F /* pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A74FF217946F5B00EEFB0F /* pixel.png */; };
+		E0A74FF71799AE7900EEFB0F /* PFNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A74FF61799AE7900EEFB0F /* PFNode.m */; };
+		E0A74FFA1799AEF200EEFB0F /* PFHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A74FF91799AEF200EEFB0F /* PFHeap.m */; };
+		E0A74FFD179A1CF000EEFB0F /* PFGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A74FFC179A1CF000EEFB0F /* PFGrid.m */; };
+		E0A75003179A281100EEFB0F /* PFJumpPointSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A75002179A281100EEFB0F /* PFJumpPointSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -451,7 +457,7 @@
 		E073643D178FC67800928995 /* TDEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDEntity.h; sourceTree = "<group>"; };
 		E073643E178FC67800928995 /* TDEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDEntity.m; sourceTree = "<group>"; };
 		E0736440179092CE00928995 /* TDAStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAStar.h; sourceTree = "<group>"; };
-		E0736441179092CE00928995 /* TDAStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAStar.m; sourceTree = "<group>"; };
+		E0736441179092CE00928995 /* TDAStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TDAStar.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E07364431790E3C400928995 /* Creeps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Creeps; path = Resources/Creeps; sourceTree = "<group>"; };
 		E0A74FD717930B4700EEFB0F /* WarTanks_GameArt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WarTanks_GameArt; path = Resources/WarTanks_GameArt; sourceTree = "<group>"; };
 		E0A74FD917935A1D00EEFB0F /* TDTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTower.h; sourceTree = "<group>"; };
@@ -465,6 +471,18 @@
 		E0A74FE71793AE5100EEFB0F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Resources/star.png; sourceTree = "<group>"; };
 		E0A74FEA1793C35700EEFB0F /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = health.png; path = Resources/health.png; sourceTree = "<group>"; };
 		E0A74FEC179452E300EEFB0F /* health-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "health-bg.png"; path = "Resources/health-bg.png"; sourceTree = "<group>"; };
+		E0A74FEF17946EA800EEFB0F /* TDBarGuage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBarGuage.h; sourceTree = "<group>"; };
+		E0A74FF017946EA800EEFB0F /* TDBarGuage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBarGuage.m; sourceTree = "<group>"; };
+		E0A74FF217946F5B00EEFB0F /* pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pixel.png; path = Resources/pixel.png; sourceTree = "<group>"; };
+		E0A74FF51799AE7900EEFB0F /* PFNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFNode.h; sourceTree = "<group>"; };
+		E0A74FF61799AE7900EEFB0F /* PFNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFNode.m; sourceTree = "<group>"; };
+		E0A74FF81799AEF200EEFB0F /* PFHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFHeap.h; sourceTree = "<group>"; };
+		E0A74FF91799AEF200EEFB0F /* PFHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFHeap.m; sourceTree = "<group>"; };
+		E0A74FFB179A1CF000EEFB0F /* PFGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFGrid.h; sourceTree = "<group>"; };
+		E0A74FFC179A1CF000EEFB0F /* PFGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGrid.m; sourceTree = "<group>"; };
+		E0A74FFE179A22CD00EEFB0F /* PFHeuristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFHeuristic.h; sourceTree = "<group>"; };
+		E0A75001179A281100EEFB0F /* PFJumpPointSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFJumpPointSearch.h; sourceTree = "<group>"; };
+		E0A75002179A281100EEFB0F /* PFJumpPointSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFJumpPointSearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +543,8 @@
 		E00B21AC178F8CB500715779 /* TDKit */ = {
 			isa = PBXGroup;
 			children = (
+				E0A74FF41799AE5C00EEFB0F /* PathFinding */,
+				E0A74FEE17946E8B00EEFB0F /* Guages */,
 				E00B2350178F93F500715779 /* Categories */,
 				E00B234C178F8D5700715779 /* World */,
 				E00B234B178F8D4800715779 /* Entities */,
@@ -555,6 +575,7 @@
 				E0A74FEA1793C35700EEFB0F /* health.png */,
 				E0A74FE21793966200EEFB0F /* particleTexture.png */,
 				E0A74FE31793966200EEFB0F /* ProjectileExplosion.plist */,
+				E0A74FF217946F5B00EEFB0F /* pixel.png */,
 				E00B21B4178F8CB500715779 /* Default-Landscape~ipad.png */,
 				E0A74FEC179452E300EEFB0F /* health-bg.png */,
 				E00B21B6178F8CB500715779 /* Icon-72.png */,
@@ -967,6 +988,31 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		E0A74FEE17946E8B00EEFB0F /* Guages */ = {
+			isa = PBXGroup;
+			children = (
+				E0A74FEF17946EA800EEFB0F /* TDBarGuage.h */,
+				E0A74FF017946EA800EEFB0F /* TDBarGuage.m */,
+			);
+			name = Guages;
+			sourceTree = "<group>";
+		};
+		E0A74FF41799AE5C00EEFB0F /* PathFinding */ = {
+			isa = PBXGroup;
+			children = (
+				E0A74FF51799AE7900EEFB0F /* PFNode.h */,
+				E0A74FF61799AE7900EEFB0F /* PFNode.m */,
+				E0A74FF81799AEF200EEFB0F /* PFHeap.h */,
+				E0A74FF91799AEF200EEFB0F /* PFHeap.m */,
+				E0A74FFB179A1CF000EEFB0F /* PFGrid.h */,
+				E0A74FFC179A1CF000EEFB0F /* PFGrid.m */,
+				E0A74FFE179A22CD00EEFB0F /* PFHeuristic.h */,
+				E0A75001179A281100EEFB0F /* PFJumpPointSearch.h */,
+				E0A75002179A281100EEFB0F /* PFJumpPointSearch.m */,
+			);
+			name = PathFinding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1039,6 +1085,7 @@
 				E0A74FE91793AE5100EEFB0F /* star.png in Resources */,
 				E0A74FEB1793C35700EEFB0F /* health.png in Resources */,
 				E0A74FED179452E300EEFB0F /* health-bg.png in Resources */,
+				E0A74FF317946F5B00EEFB0F /* pixel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,6 +1215,11 @@
 				E0736442179092CF00928995 /* TDAStar.m in Sources */,
 				E0A74FDB17935A1D00EEFB0F /* TDTower.m in Sources */,
 				E0A74FDF179360E500EEFB0F /* TDProjectile.m in Sources */,
+				E0A74FF117946EA800EEFB0F /* TDBarGuage.m in Sources */,
+				E0A74FF71799AE7900EEFB0F /* PFNode.m in Sources */,
+				E0A74FFA1799AEF200EEFB0F /* PFHeap.m in Sources */,
+				E0A74FFD179A1CF000EEFB0F /* PFGrid.m in Sources */,
+				E0A75003179A281100EEFB0F /* PFJumpPointSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "PFHeap.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -43,6 +44,17 @@
 		_map = [[TDMap alloc] initWithTMXFile:@"Maps/Template.tmx"];
 		[self addChild:_map];
 		[self schedule:@selector(spawnCreep) interval:1];
+		
+		PFHeap *heap = [[[PFHeap alloc] init] autorelease];
+		PFNode *node = nil;
+		
+		for (int i = 0; i < 300; i++) {
+			node = [[[PFNode alloc] init] autorelease];
+			[node setF:[self randFloatBetween:0 and:100]];
+			[heap push:node];
+		}
+		
+		[heap dump];
 	}
 	return self;
 }

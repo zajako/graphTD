@@ -52,28 +52,28 @@
 		[self addChild:sprite z:0 tag:kTDEntitySprite];
 		
 		// Health guage might be better as a separate class
-		_healthGauge = [CCNode node];
+		_healthGauge = [TDBarGuage guage];
+		[_healthGauge setContentSize:CGSizeMake(30, 4)];
+		
 		CGSize size = [sprite contentSize];
 		
-		sprite = [CCSprite spriteWithFile:@"health-bg.png"];
-		[sprite setAnchorPoint:ccp(0, 0)];
-		[sprite setPosition:ccp(-15, 0)];
-		[_healthGauge addChild:sprite];
-		
-		sprite = [CCSprite spriteWithFile:@"health.png"];
-		[sprite setAnchorPoint:ccp(0, 0)];
-		[sprite setPosition:ccp(-15, 0)];
-		[_healthGauge addChild:sprite];
+//		sprite = [CCSprite spriteWithFile:@"health-bg.png"];
+//		[sprite setAnchorPoint:ccp(0, 0)];
+//		[sprite setPosition:ccp(-15, 0)];
+//		[_healthGauge addChild:sprite];
+//		
+//		sprite = [CCSprite spriteWithFile:@"health.png"];
+//		[sprite setAnchorPoint:ccp(0, 0)];
+//		[sprite setPosition:ccp(-15, 0)];
+//		[_healthGauge addChild:sprite];
 		
 		CGPoint pos = CGPointZero;
 		pos.y = (size.height / 2) + 8;
-		[_healthGauge setAnchorPoint:ccp(0.5, 0.5)];
+//		[_healthGauge setAnchorPoint:ccp(0.5, 0.5)];
 		[_healthGauge setPosition:pos];
 //		[_healthGauge setVisible:NO];
 		
 		[self addChild:_healthGauge];
-		
-		[self schedule:@selector(rotateHealth)];
 	}
 	return self;
 }
@@ -82,13 +82,6 @@
 {
 	[self setExplosionFile:nil];
 	[super dealloc];
-}
-
--(void)rotateHealth
-{
-	[_healthGauge setRotation:-[self rotation]];
-	float scale = max(0, (float)hp / (float)hpMax);
-	[[[_healthGauge children] objectAtIndex:1] setScaleX:scale];
 }
 
 #pragma mark - Properties
@@ -150,13 +143,17 @@
 		return 0;
 	}
 	
-	hp = hp - amount;
+	hp = max(0, min(hpMax, hp - amount));
+	[_healthGauge setBarValue:hp outOf:hpMax];
+	
 	if (hp <= 0)
 	{
+		hp = 0;
 		dead = YES;
 		[_map entityDied:self];
 		[self explode];
 	}
+	
 	return hp;
 }
 
@@ -181,7 +178,7 @@
 -(void)onEnter
 {
 	[super onEnter];
-	
+	[self affectHP:0];
 	if ([_parent isKindOfClass:[TDMap class]])
 	{
 		_map = (TDMap *)_parent;

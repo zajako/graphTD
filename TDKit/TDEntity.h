@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "TDMap.h"
+#import "TDBarGuage.h"
 
 @class TDMap;
 
 @interface TDEntity : CCNode {
 	TDMap *_map;
 	CCParticleSystemQuad *_explosion;
-	CCNode *_healthGauge;
+	TDBarGuage *_healthGauge;
 }
 
 #pragma mark - Properties
