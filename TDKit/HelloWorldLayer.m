@@ -95,9 +95,14 @@
 	
 	if (![_map isWallAt:pos])
 	{
-        if([self randFloatBetween:1 and:100] < 50)
+        int rand = [self randFloatBetween:1 and:100];
+        if(rand < 33)
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
+        }
+        else if(rand < 66)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_spazer"] atTile:pos];
         }
         else
         {
