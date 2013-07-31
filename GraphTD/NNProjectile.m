@@ -26,7 +26,7 @@
     [self setHp: tower.projectileDamage];
     [self setRange: [[tower projectileRange] floatValue]];
     [self setSpeed: [[tower projectileSpeed] floatValue]];
-    [self setExplosionFile: tower.projectileExplosion];
+    [self setExplosionFile: [tower projectileExplosion]];
     
     return self;
 }

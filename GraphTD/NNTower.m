@@ -84,6 +84,8 @@
 	float angle = ccpToAngle(ccpSub([target position], [self position]));
 	angle = -1 * CC_RADIANS_TO_DEGREES(angle) + 90;
 	
+    
+    //Needs to somehow pause the intraval so that it doesn't fire while turning
 	CCRotateTo *rotate = [CCRotateTo actionWithDuration:[[self towerRotateSpeed] floatValue] angle:angle];
 	
 	CCCallBlock *f = [CCCallBlock actionWithBlock:^{
