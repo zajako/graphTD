@@ -115,12 +115,11 @@
 -(void)entityDied:(TDEntity *)entity
 {
 	// The entity will remove itself after this call completes. Leave it alone.
-    CGPoint pos = [self tileForPosition:[entity position]];
-	NSLog(@"Entity Died: %@ - %f,%f", entity, pos.x, pos.y);
+    NSLog(@"Entity Died: %@", entity);
     if([entity tag] == kTDEntityTower)
     {
         NSLog(@"Tower Died removing wall");
-        [self removeWallAt:pos];
+        [self removeWallAt:[entity tile]];
     }
 }
 
