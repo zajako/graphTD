@@ -19,6 +19,7 @@
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
 	TDMap *_map;
+    int _selectedTool;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

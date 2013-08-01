@@ -40,6 +40,8 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
+        
+        _selectedTool = kTDHole;
 		
 		_map = [[TDMap alloc] initWithTMXFile:@"Maps/Template.tmx"];
 		[self addChild:_map];
@@ -63,6 +65,11 @@
 {
 	float diff = high - low;
 	return (((float)rand() / RAND_MAX) * diff) + low;
+}
+
+-(void)selectTool: (int)tool
+{
+    _selectedTool = tool;
 }
 
 -(void)spawnCreep
@@ -92,6 +99,19 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint pos = [touch locationInView:[touch view]];
 	pos = [_map tileForPosition:pos];
+    
+    
+    /*
+    if(pos.x == 6 && pos.y == 22)
+    {
+        _selectedTool = kTDTower;
+    }
+    if(pos.x == 4 && pos.y == 22)
+    {
+        _selectedTool = kTDHole;
+    }
+    */
+
 	
 	if (![_map isWallAt:pos])
 	{
