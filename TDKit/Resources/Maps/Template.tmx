@@ -65,12 +65,12 @@
  </tileset>
  <layer name="Background" width="32" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NkYGBgGiDMDMTsQMwxQJhz1P5R+0ftH7V/ALDICPc/sfZLjXD/j9o/av+o/cPXfl4g5hsgzA/EAD35o88ADAAA
+   H4sIAAAAAAAAA2NkYGBgGiDMDMTsQCwNxBwDgDmh9g+E3aP2j9o/av/ItV9khPufWPulRrj/R+0ftZ8WWGKQ+J+RYeDbn8hukofSCnTyPy8Q8w0Q5gdiAOcsVcIADAAA
   </data>
  </layer>
  <layer name="Pathing" width="32" height="24">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3OMQ0AAAgDMGSQ4N8nDxbInlZBq/ImHQAAgGedDpwFmV/G3gAMAAA=
+   H4sIAAAAAAAAA2NgGHggPdAOGAWjYBSMglEwCkbBKBgBQGKgHQAFoqN4QDEAlVMN5AAMAAA=
   </data>
  </layer>
 </map>

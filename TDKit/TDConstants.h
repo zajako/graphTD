@@ -22,4 +22,9 @@ typedef enum {
 	kTDEntityProjectile		= 603
 } kTDEntity;
 
+typedef enum {
+	kTDTower                = 701,
+	kTDHole                 = 702
+} kTDSelected;
+
 #endif
