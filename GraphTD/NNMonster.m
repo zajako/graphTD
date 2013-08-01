@@ -81,5 +81,49 @@
     return self;
 }
 
+-(void)onEnter
+{
+	[super onEnter];
+    
+    if([self monsterFireRate] > 0)
+    {
+        [self schedule:@selector(seekAndDestroy) interval:[[self monsterFireRate] floatValue]];
+    }
+	
+}
+
+-(void)seekAndDestroy
+{
+    //	[self stopActionByTag:kTDActionRotate];
+	
+	TDEntity *target = [_map entity:kTDEntityTower withinRange:[[self monsterRange] intValue] from:[self position]];
+	
+	if (target == nil)
+	{
+		return;
+	}
+	
+	float angle = ccpToAngle(ccpSub([target position], [self position]));
+	angle = -1 * CC_RADIANS_TO_DEGREES(angle) + 90;
+	
+    
+    //Needs to somehow pause the intraval so that it doesn't fire while turning
+	//CCRotateTo *rotate = [CCRotateTo actionWithDuration:[[self towerRotateSpeed] floatValue] angle:angle];
+	
+	CCCallBlock *f = [CCCallBlock actionWithBlock:^{
+		NNProjectile *projectile = [NNProjectile projectileWithMonster:self];
+		[projectile setTarget:target];
+		[projectile setSource:self];
+		[projectile setRotation:angle];
+		[projectile setPosition:[self position]];
+		[_map addProjectile:projectile];
+	}];
+	
+	CCSequence *seq = [CCSequence actions:f, nil];
+	
+	[[self getChildByTag:kTDEntitySprite] runAction:seq];
+}
+
+
 
 @end

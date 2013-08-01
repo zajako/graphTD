@@ -30,5 +30,6 @@
 -(id)initWithConfig:(NSString *)file;
 -(float)randFloatBetween:(float)low and:(float)high;
 
+-(void)seekAndDestroy;
 
 @end

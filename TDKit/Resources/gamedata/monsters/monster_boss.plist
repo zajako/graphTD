@@ -11,15 +11,15 @@
 	<key>projectile-explosion</key>
 	<string>ProjectileExplosion.plist</string>
 	<key>projectile-damage</key>
-	<integer>0</integer>
+	<integer>10</integer>
 	<key>projectile-speed</key>
-	<integer>0</integer>
+	<integer>100</integer>
 	<key>projectile-range</key>
-	<integer>0</integer>
+	<integer>100</integer>
 	<key>monster-fireRate</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>monster-range</key>
-	<integer>0</integer>
+	<integer>100</integer>
 	<key>monster-rotateSpeed</key>
 	<real>0.1</real>
 	<key>monster-hp</key>

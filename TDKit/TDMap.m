@@ -115,7 +115,13 @@
 -(void)entityDied:(TDEntity *)entity
 {
 	// The entity will remove itself after this call completes. Leave it alone.
-	NSLog(@"Entity Died: %@", entity);
+    CGPoint pos = [self tileForPosition:[entity position]];
+	NSLog(@"Entity Died: %@ - %f,%f", entity, pos.x, pos.y);
+    if([entity tag] == kTDEntityTower)
+    {
+        NSLog(@"Tower Died removing wall");
+        [self removeWallAt:pos];
+    }
 }
 
 -(void)entityEscaped:(TDEntity *)entity
@@ -141,8 +147,10 @@
 
 -(void)removeWallAt:(CGPoint)pos
 {
+    //NSLog(@"Wall Removed at %f,%f",pos.x,pos.y);
 	uint32_t index = [self pointToIndex:pos];
 	_collision_map[index] = 0;
+    [self recalculateCreepPath];
 }
 
 -(BOOL)isWallAt:(CGPoint)pos

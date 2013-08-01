@@ -49,10 +49,10 @@
     [self setTowerFireRate:[plistData valueForKey:@"tower-fireRate"]];
     [self setTowerRange:[plistData valueForKey:@"tower-range"]];
     [self setTowerRotateSpeed:[plistData valueForKey:@"tower-rotateSpeed"]];
-    [self setHp:[plistData valueForKey:@"tower-hp"]];
-    [self setHpMax:[plistData valueForKey:@"tower-hp"]];
-    [self setMp:[plistData valueForKey:@"tower-mp"]];
-    [self setMpMax:[plistData valueForKey:@"tower-mp"]];
+    [self setHp:[[plistData valueForKey:@"tower-hp"] floatValue]];
+    [self setHpMax:[[plistData valueForKey:@"tower-hp"] floatValue]];
+    [self setMp:[[plistData valueForKey:@"tower-mp"] floatValue]];
+    [self setMpMax:[[plistData valueForKey:@"tower-mp"] floatValue]];
     
     //Set Projectile stats acording to config
     [self setProjectileSprite:[plistData objectForKey:@"projectile-sprite"]];

@@ -151,6 +151,10 @@
         }
          */
 	}
+    else
+    {
+        NSLog(@"Wall in current position");
+    }
 }
 
 // on "dealloc" you need to release all your retained objects
