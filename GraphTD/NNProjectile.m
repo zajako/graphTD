@@ -19,9 +19,7 @@
 
 -(id)initWithTower:(NNTower *)tower
 {
-    NSLog(@"init with tower: %@", tower.projectileSprite);
-    
-    self = [super initWithImageFile:tower.projectileSprite];
+    self = [super initWithImageFile:[tower projectileSprite]];
     
     [self setHp: tower.projectileDamage];
     [self setRange: [[tower projectileRange] floatValue]];

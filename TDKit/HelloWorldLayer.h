@@ -14,6 +14,7 @@
 #import "TDMap.h"
 #import "NNEntity.h"
 #import "NNTower.h"
+#import "NNMonster.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>

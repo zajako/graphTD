@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Circle</string>
+	<key>sprite</key>
+	<string>gameimg/monsters/circle-black.png</string>
+	<key>projectile-sprite</key>
+	<string>gameimg/projectiles/bullet_beam.png</string>
+	<key>projectile-explosion</key>
+	<string>ProjectileExplosion.plist</string>
+	<key>projectile-damage</key>
+	<integer>0</integer>
+	<key>projectile-speed</key>
+	<integer>0</integer>
+	<key>projectile-range</key>
+	<integer>0</integer>
+	<key>monster-fireRate</key>
+	<integer>0</integer>
+	<key>monster-range</key>
+	<integer>0</integer>
+	<key>monster-rotateSpeed</key>
+	<real>0.1</real>
+	<key>monster-hp</key>
+	<integer>100</integer>
+	<key>monster-mp</key>
+	<integer>50</integer>
+	<key>monster-speedMin</key>
+	<integer>20</integer>
+	<key>monster-speedMax</key>
+	<integer>100</integer>
+	<key>monster-deathExplosion</key>
+	<string>CreepExplosion.plist</string>
+</dict>
+</plist>

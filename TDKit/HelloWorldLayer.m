@@ -67,17 +67,7 @@
 
 -(void)spawnCreep
 {
-	NNEntity *ent = [NNEntity entityWithImageFile:@"WarTanks_GameArt/tank3_turret_red.png"];
-	[ent setExplosionFile:@"CreepExplosion.plist"];
-	
-	float speed = [self randFloatBetween:20 and:100];
-	float health = [self randFloatBetween:100 and:500];
-	
-	NSLog(@"Speed: %f, Health: %f", speed, health);
-	
-	[ent setSpeed:speed];
-	[ent setHp:health];
-	[ent setHpMax:health];
+	NNMonster *ent = [NNMonster monsterWithConfig:@"monster_circle"];
 	[_map spawnCreep:ent];
 }
 
