@@ -74,7 +74,18 @@
 
 -(void)spawnCreep
 {
-	NNMonster *ent = [NNMonster monsterWithConfig:@"monster_circle"];
+    int rand = [self randFloatBetween:1 and:100];
+    NSString *monsterType = @"monster_circle";
+    if(rand <= 90)
+    {
+        monsterType = @"monster_circle";
+    }
+    else
+    {
+        monsterType = @"monster_boss";
+    }
+    
+	NNMonster *ent = [NNMonster monsterWithConfig:monsterType];
 	[_map spawnCreep:ent];
 }
 
@@ -124,7 +135,8 @@
             [_map addTower:[NNTower entityWithConfig:@"tower_spazer"] atTile:pos];
         }
         
-        /*int rand = [self randFloatBetween:1 and:100];
+        /*
+        int rand = [self randFloatBetween:1 and:100];
         if(rand < 33)
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
