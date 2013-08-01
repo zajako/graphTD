@@ -64,13 +64,13 @@
   </tile>
  </tileset>
  <layer name="Background" width="32" height="24">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NkYGBgGiDMDMTsQCwNxBwDgDmh9g+E3aP2j9o/av/ItV9khPufWPulRrj/R+0ftZ8WWGKQ+J+RYeDbn8hukofSCnTyPy8Q8w0Q5gdiAOcsVcIADAAA
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9o/aP2r/yLVfZIT7n1j7pUa4/0ftH7WfFlhikPifkQF7u5AabGLbn9jcBaIVkdhKSGxlJLYKElsViU2s/3mBmA8N81OJTQiD1AIAykQYGw==
   </data>
  </layer>
  <layer name="Pathing" width="32" height="24">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGHggPdAOGAWjYBSMglEwCkbBKBgBQGKgHQAFoqN4QDEAlVMN5AAMAAA=
+  <data encoding="base64" compression="zlib">
+   eJxjYBh4ID3QDhgFo2AUjIJRMApGwSgYAUBioB0ABaKjeEAxAGr9CBQ=
   </data>
  </layer>
 </map>

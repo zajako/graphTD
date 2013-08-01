@@ -23,8 +23,11 @@ typedef enum {
 } kTDEntity;
 
 typedef enum {
-	kTDTower                = 701,
-	kTDHole                 = 702
+	kTDBlaster              = 701,
+	kTDBeam                 = 702,
+    kTDSpazer               = 703,
+	kTDSplash               = 704,
+    kTDTime                 = 705
 } kTDSelected;
 
 #endif

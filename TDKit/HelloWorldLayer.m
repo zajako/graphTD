@@ -41,7 +41,7 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
         
-        _selectedTool = kTDHole;
+        _selectedTool = kTDBlaster;
 		
 		_map = [[TDMap alloc] initWithTMXFile:@"Maps/Template.tmx"];
 		[self addChild:_map];
@@ -91,21 +91,40 @@
 	pos = [_map tileForPosition:pos];
     
     
-    /*
-    if(pos.x == 6 && pos.y == 22)
+    
+    
+    if((pos.x >= 7 && pos.x <= 9) && (pos.y >= 21 && pos.y <= 23))
     {
-        _selectedTool = kTDTower;
+        _selectedTool = kTDBlaster;
     }
-    if(pos.x == 4 && pos.y == 22)
+    
+    if((pos.x >= 10 && pos.x <= 12) && (pos.y >= 21 && pos.y <= 23))
     {
-        _selectedTool = kTDHole;
+        _selectedTool = kTDBeam;
     }
-    */
+    
+    if((pos.x >= 13 && pos.x <= 15) && (pos.y >= 21 && pos.y <= 23))
+    {
+        _selectedTool = kTDSpazer;
+    }
 
 	
 	if (![_map isWallAt:pos])
 	{
-        int rand = [self randFloatBetween:1 and:100];
+        if(_selectedTool == kTDBlaster)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
+        }
+        else if(_selectedTool == kTDBeam)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_beam"] atTile:pos];
+        }
+        else if(_selectedTool == kTDSpazer)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_spazer"] atTile:pos];
+        }
+        
+        /*int rand = [self randFloatBetween:1 and:100];
         if(rand < 33)
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
@@ -118,6 +137,7 @@
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_beam"] atTile:pos];
         }
+         */
 	}
 }
 
