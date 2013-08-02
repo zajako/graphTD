@@ -11,17 +11,17 @@
 
 @implementation NNMonster
 
-@synthesize monsterFireRate, monsterRange, monsterRotateSpeed, monsterSpeedMin, monsterSpeedMax;
+@synthesize unitFireRate, unitRange, unitRotateSpeed, unitSpeedMin, unitSpeedMax;
 @synthesize projectileSprite, projectileExplosion;
 @synthesize projectileDamage, projectileSplash, projectileSpeed, projectileRange;
 
 -(void)dealloc
 {
-    [self setMonsterFireRate:nil];
-    [self setMonsterRange:nil];
-    [self setMonsterRotateSpeed:nil];
-    [self setMonsterSpeedMin:nil];
-    [self setMonsterSpeedMax:nil];
+    [self setUnitFireRate:nil];
+    [self setUnitRange:nil];
+    [self setUnitRotateSpeed:nil];
+    [self setUnitSpeedMin:nil];
+    [self setUnitSpeedMax:nil];
     
 	[self setProjectileSprite:nil];
     [self setProjectileExplosion:nil];
@@ -55,11 +55,11 @@
 	self = [super initWithImageFile: [plistData objectForKey:@"sprite"]];
     
     //Set Towers Stats From Config
-    [self setMonsterFireRate:[plistData valueForKey:@"monster-fireRate"]];
-    [self setMonsterRange:[plistData valueForKey:@"monster-range"]];
-    [self setMonsterRotateSpeed:[plistData valueForKey:@"monster-rotateSpeed"]];
-    [self setMonsterSpeedMin:[plistData valueForKey:@"monster-speedMin"]];
-    [self setMonsterSpeedMax:[plistData valueForKey:@"monster-speedMax"]];
+    [self setUnitFireRate:[plistData valueForKey:@"monster-fireRate"]];
+    [self setUnitRange:[plistData valueForKey:@"monster-range"]];
+    [self setUnitRotateSpeed:[plistData valueForKey:@"monster-rotateSpeed"]];
+    [self setUnitSpeedMin:[plistData valueForKey:@"monster-speedMin"]];
+    [self setUnitSpeedMax:[plistData valueForKey:@"monster-speedMax"]];
     [self setExplosionFile:[plistData valueForKey:@"monster-deathExplosion"]];
     [self setHp:[[plistData valueForKey:@"monster-hp"] floatValue]];
     [self setHpMax:[[plistData valueForKey:@"monster-hp"] floatValue]];
@@ -75,10 +75,14 @@
     [self setProjectileRange:[plistData valueForKey:@"projectile-range"]];
     
     
-    float speed = [self randFloatBetween:[[self monsterSpeedMin] floatValue] and: [[self monsterSpeedMax] floatValue]];
+    float speed = [self randFloatBetween:[[self unitSpeedMin] floatValue] and: [[self unitSpeedMax] floatValue]];
     [self setSpeed:speed];
     
     NSLog(@"Speed: %f, Health: %i", speed, [self hp]);
+    
+    //Temporary to test status effects
+    [self addStatus:kTDStatusSlow forDuration:5];
+    
     
     return self;
 }
@@ -87,9 +91,9 @@
 {
 	[super onEnter];
     
-    if([self monsterFireRate] > 0)
+    if([self unitFireRate] > 0)
     {
-        [self schedule:@selector(seekAndDestroy) interval:[[self monsterFireRate] floatValue]];
+        [self schedule:@selector(seekAndDestroy) interval:[[self unitFireRate] floatValue]];
     }
 	
 }
@@ -98,7 +102,7 @@
 {
     //	[self stopActionByTag:kTDActionRotate];
 	
-	TDEntity *target = [_map entity:kTDEntityTower withinRange:[[self monsterRange] intValue] from:[self position]];
+	TDEntity *target = [_map entity:kTDEntityTower withinRange:[[self unitRange] intValue] from:[self position]];
 	
 	if (target == nil)
 	{

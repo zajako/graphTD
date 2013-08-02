@@ -12,9 +12,9 @@
     
 }
 
-@property (retain) NSNumber *towerFireRate;
-@property (retain) NSNumber *towerRange;
-@property (retain) NSNumber *towerRotateSpeed;
+@property (retain) NSNumber *unitFireRate;
+@property (retain) NSNumber *unitRange;
+@property (retain) NSNumber *unitRotateSpeed;
 
 @property (retain) NSString *projectileSprite;
 @property (retain) NSString *projectileExplosion;

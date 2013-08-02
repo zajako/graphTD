@@ -21,5 +21,6 @@
 -(void)addStatus: (kTDStatus)type forDuration: (NSInteger) duration;
 
 -(void)removeStatus: (kTDStatus)type;
+-(void)refreshPath;
 
 @end

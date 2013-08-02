@@ -13,11 +13,11 @@
     
 }
 
-@property (retain) NSNumber *monsterFireRate;
-@property (retain) NSNumber *monsterRange;
-@property (retain) NSNumber *monsterRotateSpeed;
-@property (retain) NSNumber *monsterSpeedMin;
-@property (retain) NSNumber *monsterSpeedMax;
+@property (retain) NSNumber *unitFireRate;
+@property (retain) NSNumber *unitRange;
+@property (retain) NSNumber *unitRotateSpeed;
+@property (retain) NSNumber *unitSpeedMin;
+@property (retain) NSNumber *unitSpeedMax;
 
 @property (retain) NSString *projectileSprite;
 @property (retain) NSString *projectileExplosion;

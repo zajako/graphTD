@@ -26,6 +26,9 @@
 {
     NNStatusEffect *status = [NNStatusEffect statusWithType:type duration:duration];
     [self addChild: status];
+    [status setAnchorPoint:ccp(0, 0)];
+    [status setPosition:ccp(-15, -15)];
+    [status setVisible:YES];
     [statusArray addObject:status];
 }
 
@@ -35,10 +38,16 @@
     {
         if([status tag] == type)
         {
-            [statusArray removeObject: status];
-            status = nil;
+            
+            [status endStatus];
+            
         }
     }
+}
+
+-(void)refreshPath
+{
+    [_map recalculateCreepPath];
 }
 
 @end

@@ -14,10 +14,16 @@
     
 }
 
-@property NSInteger buffLength;
+@property float buffLength;
 
 +(id)statusWithType:(kTDStatus)status duration:(NSInteger)duration;
 
 -(id)initStatusWithType:(kTDStatus)status duration:(NSInteger)duration;
+
+-(void)applyStatus;
+
+-(void)endStatus;
+
+-(void)removeStatus;
 
 @end

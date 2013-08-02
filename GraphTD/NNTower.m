@@ -11,15 +11,15 @@
 
 @implementation NNTower
 
-@synthesize towerFireRate, towerRange, towerRotateSpeed;
+@synthesize unitFireRate, unitRange, unitRotateSpeed;
 @synthesize projectileSprite, projectileExplosion;
 @synthesize projectileDamage, projectileSplash, projectileSpeed,projectileRange;
 
 -(void)dealloc
 {
-    [self setTowerFireRate:nil];
-    [self setTowerRange:nil];
-    [self setTowerRotateSpeed:nil];
+    [self setUnitFireRate:nil];
+    [self setUnitRange:nil];
+    [self setUnitRotateSpeed:nil];
     
 	[self setProjectileSprite:nil];
     [self setProjectileExplosion:nil];
@@ -47,9 +47,9 @@
 	self = [super initWithImageFile: [plistData objectForKey:@"sprite"]];
     
     //Set Towers Stats From Config
-    [self setTowerFireRate:[plistData valueForKey:@"tower-fireRate"]];
-    [self setTowerRange:[plistData valueForKey:@"tower-range"]];
-    [self setTowerRotateSpeed:[plistData valueForKey:@"tower-rotateSpeed"]];
+    [self setUnitFireRate:[plistData valueForKey:@"tower-fireRate"]];
+    [self setUnitRange:[plistData valueForKey:@"tower-range"]];
+    [self setUnitRotateSpeed:[plistData valueForKey:@"tower-rotateSpeed"]];
     [self setHp:[[plistData valueForKey:@"tower-hp"] floatValue]];
     [self setHpMax:[[plistData valueForKey:@"tower-hp"] floatValue]];
     [self setMp:[[plistData valueForKey:@"tower-mp"] floatValue]];
@@ -69,14 +69,14 @@
 -(void)onEnter
 {
 	[super onEnter];
-	[self schedule:@selector(seekAndDestroy) interval:[[self towerFireRate] floatValue]];
+	[self schedule:@selector(seekAndDestroy) interval:[[self unitFireRate] floatValue]];
 }
 
 -(void)seekAndDestroy
 {
     //	[self stopActionByTag:kTDActionRotate];
 	
-	TDEntity *target = [_map entity:kTDEntityCreep withinRange:[[self towerRange] intValue] from:[self position]];
+	TDEntity *target = [_map entity:kTDEntityCreep withinRange:[[self unitRange] intValue] from:[self position]];
 	
 	if (target == nil)
 	{
@@ -88,7 +88,7 @@
 	
     
     //Needs to somehow pause the intraval so that it doesn't fire while turning
-	CCRotateTo *rotate = [CCRotateTo actionWithDuration:[[self towerRotateSpeed] floatValue] angle:angle];
+	CCRotateTo *rotate = [CCRotateTo actionWithDuration:[[self unitRotateSpeed] floatValue] angle:angle];
 	
 	CCCallBlock *f = [CCCallBlock actionWithBlock:^{
 		NNProjectile *projectile = [NNProjectile projectileWithTower:self];
