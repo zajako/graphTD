@@ -95,7 +95,7 @@
         nearbyTargets = [_map entities:kTDEntityCreep withinRange:[[self splashRange] intValue] from:[[self target] position]];
     }
     
-    if (nearbyTargets == nil)
+    if([nearbyTargets count] <= 0)
     {
         return;
     }

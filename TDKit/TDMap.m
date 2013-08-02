@@ -113,7 +113,7 @@
 
 -(NSMutableArray *)entities:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos
 {
-    NSMutableArray *list = [[NSMutableArray alloc] init];
+    NSMutableArray *list = [NSMutableArray array];
     float closestRange = FLT_MAX;
 	CCNode *node;
 	CCARRAY_FOREACH(_children, node)
@@ -127,13 +127,8 @@
 			}
 		}
 	}
-    
-    if(list != nil)
-    {
-        return list;
-    }
-    
-    return nil;
+
+    return list;
 }
 
 
