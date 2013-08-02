@@ -19,6 +19,10 @@
 	uint32_t _tiles;
 	TDAStar *_pathFinder;
 	NSArray *_pathCache;
+	
+	CCArray *_creeps;
+	CCArray *_projectiles;
+	CCArray *_towers;
 }
 
 @property(readonly) CGPoint start;

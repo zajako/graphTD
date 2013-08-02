@@ -30,6 +30,10 @@
 		_height = size.height;
 		_tiles = _width * _height;
 		
+		_creeps = [[CCArray alloc] init];
+		_projectiles = [[CCArray alloc] init];
+		_towers = [[CCArray alloc] init];
+		
 		// Initialize the collision map and blank it out with zeros
 		// The map size cannot be resized after this. If it needs to resize,
 		// there will need to be a method to reallocate a new _collision_map
@@ -57,18 +61,34 @@
 
 -(void)dealloc
 {
-	free(_collision_map);
+	[_creeps release];
+	[_projectiles release];
+	[_towers release];
 	
+	free(_collision_map);
 	[_pathFinder release];
+	
 	[super dealloc];
 }
 
 #pragma mark - Specific Entities
+-(void)removeChild:(CCNode *)child
+{
+	CCArray *entList = [self entityListForType:[child tag]];
+	if (entList != nil && [entList containsObject:child])
+	{
+		[entList removeObject:child];
+	}
+	
+	[super removeChild:child];
+}
+
 -(void)addTower:(TDEntity *)entity atTile:(CGPoint)pos
 {
 	[entity setTag:kTDEntityTower];
 	[self addEntity:entity atTile:pos];
 	[self addWallAt:pos];
+	[_towers addObject:entity];
 }
 
 -(void)addProjectile:(TDEntity *)entity
@@ -76,6 +96,7 @@
 	[entity setTag:kTDEntityProjectile];
 	CGPoint pos = [entity position];
 	[self addEntity:entity atPosition:pos];
+	[_projectiles addObject:entity];
 }
 
 -(void)spawnCreep:(TDEntity *)entity
@@ -83,14 +104,42 @@
 	[entity setTag:kTDEntityCreep];
 	[self addEntity:entity atTile:_start];
 	[entity travelToFinish];
+	[_creeps addObject:entity];
+}
+
+-(CCArray *)entityListForType:(kTDEntity)entityType
+{
+	CCArray *entList = nil;
+	
+	switch (entityType)
+	{
+		case kTDEntityTower:
+			entList = _towers;
+			break;
+		case kTDEntityProjectile:
+			entList = _projectiles;
+			break;
+		case kTDEntityCreep:
+			entList = _creeps;
+		default:
+			break;
+	}
+	
+	return entList;
 }
 
 -(TDEntity *)entity:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos
 {
+	CCArray *entList = [self entityListForType:entityType];
+	if (entList == nil)
+	{
+		return nil;
+	}
+	
 	float closestRange = FLT_MAX;
 	CCNode *closest = nil;
 	CCNode *node;
-	CCARRAY_FOREACH(_children, node)
+	CCARRAY_FOREACH(entList, node)
 	{
 		if ([node tag] == entityType && ![(TDEntity *)node dead])
 		{
@@ -113,15 +162,20 @@
 
 -(NSMutableArray *)entities:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos
 {
+	CCArray *entList = [self entityListForType:entityType];
+	if (entList == nil)
+	{
+		return nil;
+	}
+	
     NSMutableArray *list = [NSMutableArray array];
-    float closestRange = FLT_MAX;
 	CCNode *node;
-	CCARRAY_FOREACH(_children, node)
+	CCARRAY_FOREACH(entList, node)
 	{
 		if ([node tag] == entityType && ![(TDEntity *)node dead])
 		{
 			float distance = ccpDistance(pos, [node position]);
-			if (distance < range && distance < closestRange)
+			if (distance < range)
 			{
                 [list addObject:node];
 			}
