@@ -23,5 +23,8 @@
 -(id)initWithTower:(NNTower *)tower;
 -(id)initWithMonster:(NNMonster *)monster;
 
+-(void)checkCollision;
+-(void)dealSplashDamage;
+
 
 @end

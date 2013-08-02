@@ -49,7 +49,7 @@
 {
     self = [super initWithImageFile:[monster projectileSprite]];
     
-    [self setHp: [monster projectileDamage]];
+    [self setHp: [[monster projectileDamage] intValue]];
     [self setRange: [[monster projectileRange] floatValue]];
     [self setSpeed: [[monster projectileSpeed] floatValue]];
     [self setExplosionFile: [monster projectileExplosion]];
@@ -76,19 +76,37 @@
             //if splash damage nearby monsters
             if([self splashRange] > 0)
             {
-                //This should be fetching an array of targets then looping them
-                TDEntity *nearbyTargets = [_map entity:kTDEntityCreep withinRange:[[self splashRange] intValue] from:[[self target] position]];
-                if (nearbyTargets == nil || nearbyTargets == [self target])
-                {
-                    return;
-                }
-                [nearbyTargets affectHP:[self hp]];
+                [self dealSplashDamage];
             }
-            
-            
-            
 		}
 	}
+}
+
+-(void)dealSplashDamage
+{
+    NSMutableArray *nearbyTargets = nil;
+    //This should be fetching an array of targets then looping them
+    if([[self target] tag] == kTDEntityTower)
+    {
+        nearbyTargets = [_map entities:kTDEntityTower withinRange:[[self splashRange] intValue] from:[[self target] position]];
+    }
+    else if([[self target] tag] == kTDEntityCreep)
+    {
+        nearbyTargets = [_map entities:kTDEntityCreep withinRange:[[self splashRange] intValue] from:[[self target] position]];
+    }
+    
+    if (nearbyTargets == nil)
+    {
+        return;
+    }
+    
+    for (NNEntity *splashTarget in nearbyTargets)
+    {
+        if(splashTarget != [self target])
+        {
+            [splashTarget affectHP:[self hp]];
+        }
+    }
 }
 
 @end

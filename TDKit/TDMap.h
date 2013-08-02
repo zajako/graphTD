@@ -33,6 +33,7 @@
 -(void)addProjectile:(TDEntity *)entity;
 -(void)spawnCreep:(TDEntity *)entity;
 -(TDEntity *)entity:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos;
+-(NSMutableArray *)entities:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos;
 
 #pragma mark - Entity Reporting
 -(void)entityDied:(TDEntity *)entity;

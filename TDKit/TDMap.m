@@ -111,6 +111,32 @@
 	return nil;
 }
 
+-(NSMutableArray *)entities:(kTDEntity)entityType withinRange:(float)range from:(CGPoint)pos
+{
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    float closestRange = FLT_MAX;
+	CCNode *node;
+	CCARRAY_FOREACH(_children, node)
+	{
+		if ([node tag] == entityType && ![(TDEntity *)node dead])
+		{
+			float distance = ccpDistance(pos, [node position]);
+			if (distance < range && distance < closestRange)
+			{
+                [list addObject:node];
+			}
+		}
+	}
+    
+    if(list != nil)
+    {
+        return list;
+    }
+    
+    return nil;
+}
+
+
 #pragma mark - Entity Reporting
 -(void)entityDied:(TDEntity *)entity
 {

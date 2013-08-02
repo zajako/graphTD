@@ -13,7 +13,7 @@
 	<key>projectile-damage</key>
 	<integer>10</integer>
 	<key>projectile-splash</key>
-	<string>50</string>
+	<string>0</string>
 	<key>projectile-speed</key>
 	<integer>100</integer>
 	<key>projectile-range</key>
