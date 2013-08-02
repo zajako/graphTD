@@ -8,10 +8,18 @@
 
 #import "TDEntity.h"
 
+@class NNStatusEffect;
+
 @interface NNEntity : TDEntity {
     
 }
 
+@property (retain) NSMutableArray *statusArray;
+
 -(id)initWithImageFile:(NSString *)file;
+
+-(void)addStatus: (kTDStatus)type forDuration: (NSInteger) duration;
+
+-(void)removeStatus: (kTDStatus)type;
 
 @end

@@ -30,4 +30,12 @@ typedef enum {
     kTDTime                 = 705
 } kTDSelected;
 
+typedef enum {
+	kTDStatusSlow           = 801,
+	kTDStatusHaste          = 802,
+    kTDStatusMight          = 803,
+	kTDStatusPoison         = 804,
+    kTDStatusRange          = 805
+} kTDStatus;
+
 #endif
