@@ -19,6 +19,7 @@
 @property (retain) NSString *projectileSprite;
 @property (retain) NSString *projectileExplosion;
 @property (retain) NSNumber *projectileDamage;
+@property (retain) NSNumber *projectileSplash;
 @property (retain) NSNumber *projectileSpeed;
 @property (retain) NSNumber *projectileRange;
 

@@ -15,6 +15,8 @@
     
 }
 
+@property (retain) NSNumber *splashRange;
+
 +(id)projectileWithTower:(NNTower *)tower;
 +(id)projectileWithMonster:(NNMonster *)monster;
 

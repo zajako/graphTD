@@ -13,7 +13,7 @@
 
 @synthesize towerFireRate, towerRange, towerRotateSpeed;
 @synthesize projectileSprite, projectileExplosion;
-@synthesize projectileDamage, projectileSpeed,projectileRange;
+@synthesize projectileDamage, projectileSplash, projectileSpeed,projectileRange;
 
 -(void)dealloc
 {
@@ -24,6 +24,7 @@
 	[self setProjectileSprite:nil];
     [self setProjectileExplosion:nil];
     [self setProjectileDamage:nil];
+    [self setProjectileSplash:nil];
     [self setProjectileSpeed:nil];
     [self setProjectileRange:nil];
 	
@@ -58,6 +59,7 @@
     [self setProjectileSprite:[plistData objectForKey:@"projectile-sprite"]];
     [self setProjectileExplosion:[plistData objectForKey:@"projectile-explosion"]];
     [self setProjectileDamage:[plistData valueForKey:@"projectile-damage"]];
+    [self setProjectileSplash:[plistData valueForKey:@"projectile-splash"]];
     [self setProjectileSpeed:[plistData valueForKey:@"projectile-speed"]];
     [self setProjectileRange:[plistData valueForKey:@"projectile-range"]];
     

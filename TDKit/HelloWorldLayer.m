@@ -118,6 +118,11 @@
     {
         _selectedTool = kTDSpazer;
     }
+    
+    if((pos.x >= 16 && pos.x <= 18) && (pos.y >= 21 && pos.y <= 23))
+    {
+        _selectedTool = kTDSplash;
+    }
 
 	
 	if (![_map isWallAt:pos])
@@ -134,22 +139,10 @@
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_spazer"] atTile:pos];
         }
-        
-        /*
-        int rand = [self randFloatBetween:1 and:100];
-        if(rand < 33)
+        else if(_selectedTool == kTDSplash)
         {
-            [_map addTower:[NNTower entityWithConfig:@"tower_blaster"] atTile:pos];
+            [_map addTower:[NNTower entityWithConfig:@"tower_splash"] atTile:pos];
         }
-        else if(rand < 66)
-        {
-            [_map addTower:[NNTower entityWithConfig:@"tower_spazer"] atTile:pos];
-        }
-        else
-        {
-            [_map addTower:[NNTower entityWithConfig:@"tower_beam"] atTile:pos];
-        }
-         */
 	}
     else
     {
