@@ -31,7 +31,6 @@
 
 -(void)addStatus: (kTDStatus)type forDuration: (NSInteger) duration
 {
-    NSLog(@"add Status %i",type);
     if(![self hasStatus:type])
     {
         NNStatusEffect *status = [NNStatusEffect statusWithType:type duration:duration];
@@ -62,9 +61,9 @@
     {
         if([status tag] == type)
         {
-            
+            [statusArray removeObject: status];
             [status endStatus];
-            
+            status = nil;
         }
     }
 }

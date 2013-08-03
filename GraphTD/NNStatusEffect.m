@@ -67,11 +67,6 @@
 
 -(void)endStatus
 {
-    [self removeStatus];
-}
-
--(void)removeStatus
-{
     NNEntity *parent = (NNEntity *)[self parent];
     if([self tag] == kTDStatusSlow)
     {
@@ -86,6 +81,11 @@
     [self unscheduleAllSelectors];
     [self stopAllActions];
     [[self parent] removeChild:self];
+}
+
+-(void)removeStatus
+{
+    [(NNEntity *)[self parent] removeStatus:[self tag]];
 }
 
 
