@@ -123,6 +123,11 @@
     {
         _selectedTool = kTDSplash;
     }
+    
+    if((pos.x >= 19 && pos.x <= 21) && (pos.y >= 21 && pos.y <= 23))
+    {
+        _selectedTool = kTDTime;
+    }
 
 	
 	if (![_map isWallAt:pos])
@@ -142,6 +147,10 @@
         else if(_selectedTool == kTDSplash)
         {
             [_map addTower:[NNTower entityWithConfig:@"tower_splash"] atTile:pos];
+        }
+        else if(_selectedTool == kTDTime)
+        {
+            [_map addTower:[NNTower entityWithConfig:@"tower_time"] atTile:pos];
         }
 	}
     else

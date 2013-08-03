@@ -13,7 +13,8 @@
 
 @synthesize unitFireRate, unitRange, unitRotateSpeed;
 @synthesize projectileSprite, projectileExplosion;
-@synthesize projectileDamage, projectileSplash, projectileSpeed,projectileRange;
+@synthesize projectileDamage, projectileSplash, projectileSpeed,projectileRange, projectileStatus;
+
 
 -(void)dealloc
 {
@@ -62,6 +63,7 @@
     [self setProjectileSplash:[plistData valueForKey:@"projectile-splash"]];
     [self setProjectileSpeed:[plistData valueForKey:@"projectile-speed"]];
     [self setProjectileRange:[plistData valueForKey:@"projectile-range"]];
+    [self setProjectileStatus:[[plistData valueForKey:@"projectile-status"] intValue]];
     
     return self;
 }

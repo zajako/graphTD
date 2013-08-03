@@ -18,6 +18,8 @@
 	<integer>300</integer>
 	<key>projectile-range</key>
 	<integer>100</integer>
+	<key>projectile-status</key>
+	<integer>0</integer>
 	<key>tower-fireRate</key>
 	<integer>1</integer>
 	<key>tower-range</key>

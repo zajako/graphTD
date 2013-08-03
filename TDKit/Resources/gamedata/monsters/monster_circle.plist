@@ -18,6 +18,8 @@
 	<integer>0</integer>
 	<key>projectile-range</key>
 	<integer>0</integer>
+	<key>projectile-status</key>
+	<integer>0</integer>
 	<key>monster-fireRate</key>
 	<integer>0</integer>
 	<key>monster-range</key>

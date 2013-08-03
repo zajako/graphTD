@@ -13,7 +13,7 @@
 
 @synthesize unitFireRate, unitRange, unitRotateSpeed, unitSpeedMin, unitSpeedMax;
 @synthesize projectileSprite, projectileExplosion;
-@synthesize projectileDamage, projectileSplash, projectileSpeed, projectileRange;
+@synthesize projectileDamage, projectileSplash, projectileSpeed, projectileRange, projectileStatus;
 
 -(void)dealloc
 {
@@ -73,7 +73,7 @@
     [self setProjectileSplash:[plistData valueForKey:@"projectile-splash"]];
     [self setProjectileSpeed:[plistData valueForKey:@"projectile-speed"]];
     [self setProjectileRange:[plistData valueForKey:@"projectile-range"]];
-    
+    [self setProjectileStatus:[[plistData valueForKey:@"projectile-status"] intValue]];
     
     float speed = [self randFloatBetween:[[self unitSpeedMin] floatValue] and: [[self unitSpeedMax] floatValue]];
     [self setSpeed:speed];
@@ -81,7 +81,7 @@
     NSLog(@"Speed: %f, Health: %i", speed, [self hp]);
     
     //Temporary to test status effects
-    [self addStatus:kTDStatusSlow forDuration:5];
+    //[self addStatus:kTDStatusSlow forDuration:5];
     
     
     return self;

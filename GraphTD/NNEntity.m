@@ -17,19 +17,43 @@
 {
 	self = [super initWithImageFile: file];
     
-    statusArray = [NSMutableArray array];
+    statusArray = [[NSMutableArray alloc] init];
     
     return self;
 }
 
+-(void)dealloc
+{
+    self.statusArray = nil;
+    
+    [super dealloc];
+}
+
 -(void)addStatus: (kTDStatus)type forDuration: (NSInteger) duration
 {
-    NNStatusEffect *status = [NNStatusEffect statusWithType:type duration:duration];
-    [self addChild: status];
-    [status setAnchorPoint:ccp(0, 0)];
-    [status setPosition:ccp(-15, -15)];
-    [status setVisible:YES];
-    [statusArray addObject:status];
+    NSLog(@"add Status %i",type);
+    if(![self hasStatus:type])
+    {
+        NNStatusEffect *status = [NNStatusEffect statusWithType:type duration:duration];
+        [self addChild: status];
+        [status setAnchorPoint:ccp(0, 0)];
+        [status setPosition:ccp(-15, -15)];
+        [status setVisible:YES];
+        [statusArray addObject:status];
+    }
+    
+}
+
+-(BOOL)hasStatus: (kTDStatus)type
+{
+    for (NNStatusEffect *status in statusArray)
+    {
+        if([status tag] == type)
+        {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 -(void)removeStatus: (kTDStatus)type

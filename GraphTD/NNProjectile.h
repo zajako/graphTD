@@ -16,6 +16,7 @@
 }
 
 @property (retain) NSNumber *splashRange;
+@property kTDStatus *statusEffect;
 
 +(id)projectileWithTower:(NNTower *)tower;
 +(id)projectileWithMonster:(NNMonster *)monster;

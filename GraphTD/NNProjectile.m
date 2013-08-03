@@ -13,7 +13,7 @@
 
 @implementation NNProjectile
 
-@synthesize splashRange;
+@synthesize splashRange,statusEffect;
 
 +(id)projectileWithTower:(NNTower *)tower
 {
@@ -41,6 +41,7 @@
     [self setSpeed: [[tower projectileSpeed] floatValue]];
     [self setExplosionFile: [tower projectileExplosion]];
     [self setSplashRange: [tower projectileSplash]];
+    [self setStatusEffect: [tower projectileStatus]];
     
     return self;
 }
@@ -54,6 +55,7 @@
     [self setSpeed: [[monster projectileSpeed] floatValue]];
     [self setExplosionFile: [monster projectileExplosion]];
     [self setSplashRange: [monster projectileSplash]];
+    [self setStatusEffect: [monster projectileStatus]];
     
     return self;
 }
@@ -68,6 +70,11 @@
 		float dist = ccpDistance([[self target] position], [self position]);
 		if (dist < (targetRadius + projectileRadius))
 		{
+            if([self statusEffect] > 0)
+            {
+                [(NNEntity *)[self target] addStatus: (kTDStatus)[self statusEffect] forDuration: 5];
+            }
+            
 			[[self target] affectHP:[self hp]];
 			[self stopAllActions];
 			[self unscheduleAllSelectors];
@@ -104,6 +111,10 @@
     {
         if(splashTarget != [self target])
         {
+            if([self statusEffect] > 0)
+            {
+                [splashTarget addStatus: [self statusEffect] forDuration: 5];
+            }
             [splashTarget affectHP:[self hp]];
         }
     }

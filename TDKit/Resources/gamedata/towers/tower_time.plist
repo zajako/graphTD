@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Beam</string>
+	<string>Time</string>
 	<key>sprite</key>
-	<string>gameimg/towers/z.png</string>
+	<string>gameimg/towers/infinity.png</string>
 	<key>projectile-sprite</key>
-	<string>gameimg/projectiles/bullet_spazer.png</string>
+	<string>gameimg/projectiles/bullet_infinity.png</string>
 	<key>projectile-explosion</key>
 	<string>ProjectileExplosion.plist</string>
 	<key>projectile-damage</key>
-	<integer>10</integer>
+	<integer>1</integer>
 	<key>projectile-splash</key>
-	<string>0</string>
+	<string>200</string>
 	<key>projectile-speed</key>
-	<integer>500</integer>
-	<key>projectile-range</key>
-	<integer>300</integer>
-	<key>projectile-status</key>
-	<integer>0</integer>
-	<key>tower-fireRate</key>
-	<real>1.5</real>
-	<key>tower-range</key>
-	<integer>300</integer>
-	<key>tower-rotateSpeed</key>
-	<real>0.5</real>
-	<key>tower-hp</key>
-	<integer>400</integer>
-	<key>tower-mp</key>
 	<integer>200</integer>
+	<key>projectile-range</key>
+	<integer>200</integer>
+	<key>projectile-status</key>
+	<integer>801</integer>
+	<key>tower-fireRate</key>
+	<real>0.5</real>
+	<key>tower-range</key>
+	<integer>200</integer>
+	<key>tower-rotateSpeed</key>
+	<real>0.3</real>
+	<key>tower-hp</key>
+	<integer>1000</integer>
+	<key>tower-mp</key>
+	<integer>50</integer>
 </dict>
 </plist>

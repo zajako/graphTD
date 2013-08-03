@@ -25,6 +25,7 @@
 @property (retain) NSNumber *projectileSplash;
 @property (retain) NSNumber *projectileSpeed;
 @property (retain) NSNumber *projectileRange;
+@property kTDStatus *projectileStatus;
 
 +(id)monsterWithConfig:(NSString *)file;
 
