@@ -55,15 +55,14 @@
 
 -(void)applyStatus
 {
-    NNEntity *affected = (NNEntity *)_parent;
+    NNEntity *parent = (NNEntity *)[self parent];
     if([self tag] == kTDStatusSlow)
     {
-        NSInteger newSpeed = [affected speed] * 0.5;
-        [affected setSpeed: newSpeed];
+        NSInteger newSpeed = [parent speed] * 0.5;
+        [parent setSpeed: newSpeed];
     }
     
-    [affected refreshPath];
-    NSLog(@"Buff Started: %f",[affected speed]);
+    [parent refreshPath];
 }
 
 -(void)endStatus
@@ -73,15 +72,17 @@
 
 -(void)removeStatus
 {
-    NNEntity *affected = (NNEntity *)_parent;
+    NNEntity *parent = (NNEntity *)[self parent];
     if([self tag] == kTDStatusSlow)
     {
-        NSInteger newSpeed = [affected speed] * 2;
-        [affected setSpeed: newSpeed];
+        NSInteger newSpeed = [parent speed] * 2;
+        [parent setSpeed: newSpeed];
     }
-    [affected refreshPath];
-    NSLog(@"Buff Ended: %f",[affected speed]);
     
+    //Refresh the path to apply the change of speed
+    [parent refreshPath];
+    
+    //Remove the Status Effect
     [self unscheduleAllSelectors];
     [self stopAllActions];
     [[self parent] removeChild:self];

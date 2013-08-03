@@ -528,6 +528,7 @@
 		816258F517A8A06000980C90 /* GraphTD */ = {
 			isa = PBXGroup;
 			children = (
+				8162591217AC8F4C00980C90 /* Guages */,
 				816258F617A8A06900980C90 /* Entities */,
 			);
 			name = GraphTD;
@@ -544,10 +545,17 @@
 				8162590A17A8C5BC00980C90 /* NNProjectile.m */,
 				8162590C17A99F0D00980C90 /* NNMonster.h */,
 				8162590D17A99F0D00980C90 /* NNMonster.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		8162591217AC8F4C00980C90 /* Guages */ = {
+			isa = PBXGroup;
+			children = (
 				8162590F17AC31F600980C90 /* NNStatusEffect.h */,
 				8162591017AC31F700980C90 /* NNStatusEffect.m */,
 			);
-			name = Entities;
+			name = Guages;
 			sourceTree = "<group>";
 		};
 		E00B218C178F8CB500715779 = {
