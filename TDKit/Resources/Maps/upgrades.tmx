@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
+  <image source="Tiles/polygrid.png" width="192" height="352"/>
+  <tile id="0">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="Wall" value="1"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="Finish" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Start" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJyTZmBgYBogzAzE7EBsAcSWQGwFxBx0xJxQ++lpJy77GfGEEbIeaqpDth85HBTR1CCbi6xOiUh1yjjU4bIfPYxwmUupulH7B4/9vEDMhwXzo+mnprqBzP8iDIM3/6sQGa+qVIz/gU5/o/YPrP0jLf8PtP0Sg8T/uMoperY/6e1vfSA2gPofVzqlBwblBQBdIBjg
+  </data>
+ </layer>
+ <layer name="Pathing" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJyTZhh4IIqERyoQxYNpqQ5ZPTHi1FY3av+o/TDxgUz/Aw0G2v+DIf5H7R/Z9o/k/E9vIDHQDoACfPE0immPATuOFCM=
+  </data>
+ </layer>
+</map>
