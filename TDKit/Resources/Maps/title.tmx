@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
+  <image source="Tiles/polygrid.png" width="192" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="Wall" value="1"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="Finish" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Start" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9mPar42GsYnhEscnxoGFjct+dDeii+Ezl1gxQvZjc782FrPIDRNi/E/I/YTUEtJDSvyTE/7k2E9PLDLA9pPjf0J5kdb244pHfPFPT/tJdcNw8j89459aeCTbLzFI/M/IgL1dSA02se1PbO4C0YpIbCUktjISWwWJrYrEJtb/vEDMh4b5qcQmhEFqARCTI6g=
+  </data>
+ </layer>
+ <layer name="Pathing" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztlOEKABAMhPcSSnn/9/THD+m2E7VRu1px4T6ESLxaNEDqCZWlkKf5liegreUzz1p312P5iH/25v7JmbD8HX42ls3R8q37Y1y3+Slb7C16cqC+F4OW78Xw4v7zbf2lGg0whP6ULL/qnAAPDQ==
+  </data>
+ </layer>
+</map>

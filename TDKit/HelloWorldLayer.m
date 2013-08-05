@@ -41,9 +41,13 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
         
+        CCSprite* backgroundImage = [CCSprite spriteWithFile:@"gameimg/backgrounds/title.png"];
+        backgroundImage.position = ccp(512, 384);
+        [self addChild:backgroundImage z:0];
+        
         _selectedTool = kTDBlaster;
 		
-		_map = [[TDMap alloc] initWithTMXFile:@"Maps/Template.tmx"];
+		_map = [[TDMap alloc] initWithTMXFile:@"Maps/title.tmx"];
 		[self addChild:_map];
 		[self schedule:@selector(spawnCreep) interval:1];
 		
