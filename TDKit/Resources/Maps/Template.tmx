@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
-  <image source="Tiles/polygrid.png" width="192" height="256"/>
+  <image source="Tiles/polygrid.png" width="192" height="352"/>
   <tile id="0">
    <properties>
     <property name="buildable" value="1"/>
@@ -65,7 +65,7 @@
  </tileset>
  <layer name="Background" width="32" height="24">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9o/aP2r/yLVfZIT7n1j7pUa4/0ftH7WfFlhikPifkQF7u5AabGLbn9jcBaIVkdhKSGxlJLYKElsViU2s/3mBmA8N81OJTQiD1AIAykQYGw==
+   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9o/aP2r/yLVfZIT7n1j7pUa4/0ftH7WfFlhikPifkQF7u5AabGLbn9jcBaIVkdhKSGxlJLYKElsViY0P6wOxAVQtLxDzoWF+KrEJYZBaAPTYGGo=
   </data>
  </layer>
  <layer name="Pathing" width="32" height="24">

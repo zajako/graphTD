@@ -14,6 +14,7 @@
 		8162590B17A8C5BC00980C90 /* NNProjectile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162590A17A8C5BC00980C90 /* NNProjectile.m */; };
 		8162590E17A99F0D00980C90 /* NNMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162590D17A99F0D00980C90 /* NNMonster.m */; };
 		8162591117AC31F700980C90 /* NNStatusEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162591017AC31F700980C90 /* NNStatusEffect.m */; };
+		8162591517AF7D6F00980C90 /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162591417AF7D6F00980C90 /* GameLayer.m */; };
 		E0099AEE178FA8B5008F62A3 /* Maps in Resources */ = {isa = PBXBuildFile; fileRef = E0099AED178FA8B5008F62A3 /* Maps */; };
 		E00B2199178F8CB500715779 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00B2198178F8CB500715779 /* QuartzCore.framework */; };
 		E00B219B178F8CB500715779 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00B219A178F8CB500715779 /* OpenGLES.framework */; };
@@ -185,6 +186,8 @@
 		8162590D17A99F0D00980C90 /* NNMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NNMonster.m; path = GraphTD/NNMonster.m; sourceTree = "<group>"; };
 		8162590F17AC31F600980C90 /* NNStatusEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NNStatusEffect.h; path = GraphTD/NNStatusEffect.h; sourceTree = "<group>"; };
 		8162591017AC31F700980C90 /* NNStatusEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NNStatusEffect.m; path = GraphTD/NNStatusEffect.m; sourceTree = "<group>"; };
+		8162591317AF7D6F00980C90 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = GraphTD/GameLayer.h; sourceTree = "<group>"; };
+		8162591417AF7D6F00980C90 /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = GraphTD/GameLayer.m; sourceTree = "<group>"; };
 		E0099AED178FA8B5008F62A3 /* Maps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Maps; path = Resources/Maps; sourceTree = "<group>"; };
 		E00B2195178F8CB500715779 /* TDKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00B2198178F8CB500715779 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -461,12 +464,12 @@
 		E00B2338178F8CB800715779 /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Kazmath.txt; path = libs/LICENSE_Kazmath.txt; sourceTree = "<group>"; };
 		E00B233A178F8CB800715779 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		E00B233B178F8CB800715779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E00B233D178F8CB800715779 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E00B233E178F8CB800715779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E00B2340178F8CB800715779 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		E00B2341178F8CB800715779 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		E00B2343178F8CB800715779 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		E00B2344178F8CB800715779 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		E00B233D178F8CB800715779 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TDKit/AppDelegate.h; sourceTree = "<group>"; };
+		E00B233E178F8CB800715779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TDKit/AppDelegate.m; sourceTree = "<group>"; };
+		E00B2340178F8CB800715779 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldLayer.h; path = TDKit/HelloWorldLayer.h; sourceTree = "<group>"; };
+		E00B2341178F8CB800715779 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldLayer.m; path = TDKit/HelloWorldLayer.m; sourceTree = "<group>"; };
+		E00B2343178F8CB800715779 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroLayer.h; path = TDKit/IntroLayer.h; sourceTree = "<group>"; };
+		E00B2344178F8CB800715779 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroLayer.m; path = TDKit/IntroLayer.m; sourceTree = "<group>"; };
 		E00B234D178F8F8C00715779 /* TDMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMap.h; sourceTree = "<group>"; };
 		E00B234E178F8F8C00715779 /* TDMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMap.m; sourceTree = "<group>"; };
 		E00B2351178F941900715779 /* CCTMXLayer+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTMXLayer+Helpers.h"; sourceTree = "<group>"; };
@@ -530,6 +533,14 @@
 			children = (
 				8162591217AC8F4C00980C90 /* Guages */,
 				816258F617A8A06900980C90 /* Entities */,
+				E00B2340178F8CB800715779 /* HelloWorldLayer.h */,
+				E00B2341178F8CB800715779 /* HelloWorldLayer.m */,
+				E00B2343178F8CB800715779 /* IntroLayer.h */,
+				E00B2344178F8CB800715779 /* IntroLayer.m */,
+				E00B233D178F8CB800715779 /* AppDelegate.h */,
+				E00B233E178F8CB800715779 /* AppDelegate.m */,
+				8162591317AF7D6F00980C90 /* GameLayer.h */,
+				8162591417AF7D6F00980C90 /* GameLayer.m */,
 			);
 			name = GraphTD;
 			sourceTree = "<group>";
@@ -601,12 +612,6 @@
 				E00B2350178F93F500715779 /* Categories */,
 				E00B234C178F8D5700715779 /* World */,
 				E00B234B178F8D4800715779 /* Entities */,
-				E00B233D178F8CB800715779 /* AppDelegate.h */,
-				E00B233E178F8CB800715779 /* AppDelegate.m */,
-				E00B2340178F8CB800715779 /* HelloWorldLayer.h */,
-				E00B2341178F8CB800715779 /* HelloWorldLayer.m */,
-				E00B2343178F8CB800715779 /* IntroLayer.h */,
-				E00B2344178F8CB800715779 /* IntroLayer.m */,
 				E00B21AD178F8CB500715779 /* Resources */,
 				E00B21C5178F8CB500715779 /* libs */,
 				E00B2339178F8CB800715779 /* Supporting Files */,
@@ -1282,6 +1287,7 @@
 				8162590B17A8C5BC00980C90 /* NNProjectile.m in Sources */,
 				8162590E17A99F0D00980C90 /* NNMonster.m in Sources */,
 				8162591117AC31F700980C90 /* NNStatusEffect.m in Sources */,
+				8162591517AF7D6F00980C90 /* GameLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

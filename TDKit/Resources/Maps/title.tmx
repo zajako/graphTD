@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="Poly" tilewidth="32" tileheight="32">
-  <image source="Tiles/polygrid.png" width="192" height="288"/>
+  <image source="Tiles/polygrid.png" width="192" height="352"/>
   <tile id="0">
    <properties>
     <property name="buildable" value="1"/>
@@ -65,7 +65,7 @@
  </tileset>
  <layer name="Background" width="32" height="24">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9mPar42GsYnhEscnxoGFjct+dDeii+Ezl1gxQvZjc782FrPIDRNi/E/I/YTUEtJDSvyTE/7k2E9PLDLA9pPjf0J5kdb244pHfPFPT/tJdcNw8j89459aeCTbLzFI/M/IgL1dSA02se1PHSDWBWI9JHeBaEUkthISWxmJrYLEVkViE+t/XiDmQ8P8VGITwiC1AHwTJBc=
+   eJxjZGBgYBogzAzE7EAsDcQcA4A5ofYPhN2j9mPar42GsYnhEscnxoGFjct+dDeii+Ezl1gxQvZjc782FrPIDRNi/E/I/YTUEtJDSvyTE/7k2E9PLDLA9pPjf0J5kdb244pHfPFPT/tJdcNw8j89459aeCTbLzFI/M/IMPDtT5h7dIBYF4j1iHC7ERAbA7EJkX61AGJLILZC8z8vEPMNEOYHYgC2sySS
   </data>
  </layer>
  <layer name="Pathing" width="32" height="24">

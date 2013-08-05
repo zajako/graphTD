@@ -1,41 +1,26 @@
 //
-//  HelloWorldLayer.m
+//  GameLayer.m
 //  TDKit
 //
-//  Created by Tommy Allen on 7/11/13.
-//  Copyright Nevernull 2013. All rights reserved.
+//  Created by James Covey on 8/5/13.
+//  Copyright 2013 Nevernull. All rights reserved.
 //
 
-// Import the interfaces
-#import "HelloWorldLayer.h"
-
-// Needed to obtain the Navigation Controller
+#import "GameLayer.h"
 #import "AppDelegate.h"
 #import "PFHeap.h"
-#import "GameLayer.h"
+#import "HelloWorldLayer.h"
 
-#pragma mark - HelloWorldLayer
+@implementation GameLayer
 
-// HelloWorldLayer implementation
-@implementation HelloWorldLayer
-
-// Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	HelloWorldLayer *layer = [HelloWorldLayer node];
-	
-	// add layer as a child to scene
+	GameLayer *layer = [GameLayer node];
 	[scene addChild: layer];
-	
-	// return the scene
 	return scene;
 }
 
-// on "init" you need to initialize your instance
 -(id) init
 {
 	// always call "super" init
@@ -48,7 +33,7 @@
         
         _selectedTool = kTDBlaster;
 		
-		_map = [[TDMap alloc] initWithTMXFile:@"Maps/title.tmx"];
+		_map = [[TDMap alloc] initWithTMXFile:@"Maps/Template.tmx"];
 		[self addChild:_map];
 		[self schedule:@selector(spawnCreep) interval:1];
 		
@@ -106,39 +91,43 @@
 	CGPoint pos = [touch locationInView:[touch view]];
 	pos = [_map tileForPosition:pos];
     
-    
-    
-    /*
     //These are the normal tower buttons
     if((pos.x >= 7 && pos.x <= 9) && (pos.y >= 21 && pos.y <= 23))
     {
         _selectedTool = kTDBlaster;
     }
-    
+     
     if((pos.x >= 10 && pos.x <= 12) && (pos.y >= 21 && pos.y <= 23))
     {
         _selectedTool = kTDBeam;
     }
-    
+     
     if((pos.x >= 13 && pos.x <= 15) && (pos.y >= 21 && pos.y <= 23))
     {
         _selectedTool = kTDSpazer;
     }
-    
+     
     if((pos.x >= 16 && pos.x <= 18) && (pos.y >= 21 && pos.y <= 23))
     {
         _selectedTool = kTDSplash;
     }
-    
+     
     if((pos.x >= 19 && pos.x <= 21) && (pos.y >= 21 && pos.y <= 23))
     {
         _selectedTool = kTDTime;
     }
-    */
+    
+    if((pos.x >= 29 && pos.x <= 30) && (pos.y >= 21 && pos.y <= 23))
+    {
+        NSLog(@"MENUUUUUU!!!");
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] ]];
+    }
+    
+    /*
+    //Buttons for titles
     if((pos.x >= 4 && pos.x <= 6) && (pos.y >= 21 && pos.y <= 23))
     {
         NSLog(@"Start Button Pressed LETS GET IT STARTED!");
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene]]];
     }
     
     if((pos.x >= 15 && pos.x <= 18) && (pos.y >= 21 && pos.y <= 23))
@@ -150,7 +139,8 @@
     {
         NSLog(@"UPGRAYEDD, with a double D for a double dose of pimping!");
     }
-
+    */
+    
 	
 	if (![_map isWallAt:pos])
 	{
@@ -181,28 +171,11 @@
     }
 }
 
-// on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
+
 	[super dealloc];
 }
 
-#pragma mark GameKit delegate
 
--(void) achievementViewControllerDidFinish:(GKAchievementViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
-
--(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
-{
-	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-	[[app navController] dismissModalViewControllerAnimated:YES];
-}
 @end
