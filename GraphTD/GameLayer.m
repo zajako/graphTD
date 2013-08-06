@@ -13,6 +13,11 @@
 
 @implementation GameLayer
 
+@synthesize hp;
+@synthesize hpMax;
+@synthesize mp;
+@synthesize mpMax;
+
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
@@ -45,10 +50,32 @@
 			[node setF:[self randFloatBetween:0 and:100]];
 			[heap push:node];
 		}
-		
+        
 		[heap dump];
+        
+        
+        hpMax = 10000;
+		hp = 10000;
+		mpMax = 100;
+		mp = 100;
+        
+        _healthGauge = [TDBarGuage guage];
+		[_healthGauge setContentSize:CGSizeMake(100, 10)];
+        _healthGauge.position = ccp(70, 75);
+        [_healthGauge setAutoShow:NO];
+		[self addChild:_healthGauge];
+        
+        
+        [_healthGauge setBarValue:hp outOf:hpMax];
+        
 	}
 	return self;
+}
+
+-(void)removeHealth: (NSInteger) amount
+{
+    hp = max(0, min(hpMax, hp - amount));
+	[_healthGauge setBarValue:hp outOf:hpMax];
 }
 
 -(float)randFloatBetween:(float)low and:(float)high

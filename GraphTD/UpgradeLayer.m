@@ -85,6 +85,11 @@
 	[self setTouchEnabled:YES];
 }
 
+-(void)removeHealth: (NSInteger) amount
+{
+    
+}
+
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [touches anyObject];

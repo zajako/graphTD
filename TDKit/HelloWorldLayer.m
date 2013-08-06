@@ -67,6 +67,11 @@
 	return self;
 }
 
+-(void)removeHealth: (NSInteger) amount
+{
+    
+}
+
 -(float)randFloatBetween:(float)low and:(float)high
 {
 	float diff = high - low;
@@ -142,7 +147,7 @@
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene]]];
     }
     
-    if((pos.x >= 15 && pos.x <= 18) && (pos.y >= 21 && pos.y <= 23))
+    if((pos.x >= 14 && pos.x <= 17) && (pos.y >= 21 && pos.y <= 23))
     {
         NSLog(@"AHHHHHH SHITTTT, Lets get Back to the ACTION!");
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene]]];

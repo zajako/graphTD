@@ -200,6 +200,7 @@
 
 -(void)entityEscaped:(TDEntity *)entity
 {
+    [_parent removeHealth:[entity hp]];
 	// Same as above.  Leave entity alone.
 	NSLog(@"Entity Escaped: %@", entity);
 }

@@ -15,9 +15,17 @@
 @interface GameLayer : CCLayer {
     TDMap *_map;
     int _selectedTool;
+    TDBarGuage *_healthGauge;
 }
+
+@property NSInteger hp;
+@property NSInteger hpMax;
+
+@property NSInteger mp;
+@property NSInteger mpMax;
 
 +(CCScene *) scene;
 -(void)spawnCreep;
+-(void)removeHealth: (NSInteger) amount;
 
 @end

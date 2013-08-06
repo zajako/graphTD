@@ -19,5 +19,6 @@
 
 +(CCScene *) scene;
 -(void)spawnCreep;
+-(void)removeHealth: (NSInteger) amount;
 
 @end
